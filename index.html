@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Yatra+One">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: whitesmoke;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* First Navbar */
+    nav {
+      background-color: #3c2bd4;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar, .navbar-second {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li, .navbar-second li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .navbar li:last-child, .navbar-second li:last-child {
+      margin-right: 0;
+    }
+
+    .navbar a, .navbar-second a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .navbar-second {
+      background-color:white;
+      padding: 10px;
+      margin-left: 10px;
+    }
+
+    .navbar-second li {
+      margin-top: 25px;
+    }
+
+    .navbar-second a {
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .my-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color:  #3c2bd4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 40px;
+      height: 70px;
+      border-color: #000;
+    }
+
+    /* Home Image with Text */
+    .image-container {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 1300px;
+      height: 520px;
+      z-index: -1;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.2);
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    /* Our Team Section */
+    .wrapper {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .wrapper h1 {
+      font-family: 'Yatra One', cursive;
+      font-size: 48px;
+      color: green;
+      margin-bottom: 25px;
+    }
+
+    .our_team {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: -10px;
+    }
+
+    .team_member {
+      width: 250px;
+      margin: 5px;
+      background: whitesmoke;
+      padding: 20px 10px;
+    }
+
+    .team_member .member_img {
+      background: blue;
+      max-width: 190px;
+      width: 100%;
+      height: 190px;
+      margin: 0 auto;
+      border-radius: 50%;
+      padding: 5px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .team_member .member_img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .team_member h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      margin: 15px 0 0px;
+    }
+
+    .team_member span {
+      font-size: 10px;
+    }
+
+    .team_member p {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .team_member .social_media {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background: blue;
+      width: 95%;
+      height: 95%;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0);
+      transition: all 0.5s ease;
+    }
+
+    .team_member .social_media .item {
+      margin: 0 10px;
+    }
+
+    .team_member .social_media .fab {
+      color: #8c7ae6;
+      font-size: 20px;
+    }
+
+    .team_member .member_img:hover .social_media {
+      transform: scale(1);
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: whitesmoke;
+      position: relative;
+      width: 100%;
+      min-height: 350px;
+      padding: 3rem 1rem;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .col {
+      min-width: 250px;
+      color: #f2f2f2f2;
+      font-family: poppins;
+      padding: 0 2rem;
+    }
+
+    .col .logo {
+      width: 100px;
+      margin-bottom: 25px;
+    }
+
+    .col h3 {
+      color: black;
+      margin-bottom: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .col h3::after {
+      content: '';
+      height: 3px;
+      width: 0px;
+      background-color: blue;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s ease;
+    }
+
+    .col h3:hover::after {
+      width: 30px;
+    }
+
+    .col .social a i {
+      color: #ff014fff;
+      margin-top: 2rem;
+      margin-right: 5px;
+      transition: 0.3s ease;
+    }
+
+    .col .social a i:hover {
+      transform: scale(1.5);
+      filter: grayscale(25);
+    }
+
+    .col .links a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      margin-bottom: 5px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .col .links a::before {
+      content: '';
+      height: 16px;
+      width: 3px;
+      position: absolute;
+      top: 5px;
+      left: -10px;
+      background-color: blue;
+      transition: 0.5s ease;
+      opacity: 0;
+    }
+
+    .col .links a:hover::before {
+      opacity: 1;
+    }
+
+    .col .links a:hover {
+      transform: translateX(-8px);
+      color: blue;
+    }
+
+    .col .contact-details {
+      display: inline-flex;
+      justify-content: space-between;
+      color: black;
+    }
+
+    .col .contact-details i {
+      margin-right: 15px;
+    }
+
+    .row .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+    }
+
+    .row .form input {
+      background-color: #1a1c20ff;
+      border: 0;
+      outline: none;
+      padding: 14px 20px;
+      border-radius: 6px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .form button {
+      padding: 14px 20px;
+      border: 0;
+      border-radius: 6px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: #ff014fff;
+    }
+
+    /** Responsive Design **/
+    @media(max-width:900px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .col {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 25px;
+      }
+    }
+
+    @media(max-width:768px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .col {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .column-company {
+        color: black;
+      }
+    }
+  </style>
+  <title>Navbar with Font Awesome Icons</title>
+</head>
+<body>
+  <!-- First Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="tel:0246119272"><i class="fas fa-phone"></i> 0246119272</a></li>
+      <li><a href="mailto:applygaf2024@gmail.com"><i class="fas fa-envelope"></i> applygaf2024@gmail.com</a></li>
+    </ul>
+    
+    <div>
+      <ul class="navbar">     
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  
+ <!-- Second Navbar -->
+   <nav class="navbar-second">
+    <ul class="navbar">
+        <li><a href="#"><img src="gaf pic.png" alt="GAFCSC Logo" style="width: 40px;"><b>GAFCSC</b></a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="try.html">Resources</a></li>
+      <li><a href="#">GAFCSC Website</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <a href="login.html" class="my-button">My Application</a>
+
+
+  </nav>
+  
+  <!-- Home Image with Text -->
+  <div class="image-container">
+    <img src="background image.jpg" alt="Background Image">
+    <div class="content">
+      <p><b>Welcome To GAFCSC Application</b></p>
+      
+    </div>
+  </div>
+
+  <!-- Our Team Section -->
+  <div class="wrapper">
+    <h1><b>GHANA ARMED FORCES RECRUITMENT 2024/25</b></h1>
+
+    <div class="our_team">
+      <div class="team_member">
+        <div class="member_img">
+          <img src="member_1 (1).png" alt="our_team">
+          <div class="social_media">
+            <div class="text"><a href="login.html"><b>Apply Now</b></a></div>
+          </div>
+        </div>
+        <h3>Junior Staff Course</h3>
+        <span><b>Application Closed</b></span>
+        <p>The Junior Staff Course is an 18-week course, divided into 2 Terms of 9 weeks each duration.</p>
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img src="member_2.png" alt="our_team">
+          <div class="social_media">
+            <div class="text"><b>Apply Now</b></div>
+          </div>
+        </div>
+        <h3>Senior Staff Course</h3>
+        <span></span>
+        <p>GAFCSC Course commences with a short Pre-Course Instruction package of 2 weeks followed by 3 terms.</p>
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img src="member_3.png" alt="our_team">
+          <div class="social_media">
+            <div class="text"><b>Apply Now</b></div>
+          </div>
+        </div>
+        <h3>Post-Graduate</h3>
+        <span></span>
+        <p>This course examines theoretically and empirically the government, politics and economies of Africa.</p>
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img src="member_4.png" alt="our_team">
+          <div class="social_media">
+            <div class="text"><b>Login</b></div>
+          </div>
+        </div>
+        <h3>Staff Portal</h3>
+        <span></span>
+        <p>Enter this section to access the staff portal</p>
+      </div>  
+    </div>
+  </div> 
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col" id="company">
+          <img src="gaf.jpg" alt=" " class="logo" style="border-radius: 40px;">
+          <p style="color: black;">GAFCSC is noted, as a world-class College and a regional training center, not only in Defence and Military Studies, but also in Governance and Leadership, International Politics, Administration and Management, as well as Crisis and Conflict Management.</p>
+        </div>
+        <div class="col" id="services">
+          <h3>Helpful Links</h3>
+          <div class="links">
+            <a href="#">Applicant Login</a>
+            <a href="#">Students Portal</a>
+            <a href="#">Staff Login</a>
+            <a href="#">Administrative Guidance</a>
+          </div>
+        </div>
+        <div class="col" id="useful-links">
+          <h3>Useful Links</h3>
+          <div class="links">
+            <a href="#">GAFSCS</a>
+            <a href="#">How to Apply</a>
+            <a href="#">Course Guide</a>
+            <a href="#">Reading Materials</a>
+          </div>
+        </div>
+        <div class="col" id="contact">
+          <h3>Contact</h3>
+          <div class="contact-details">
+            <i class="fa fa-location"></i>
+            <p>Ghana Armed Forces Command And Staff College (GAFCSC) Otu Barracks, Teshie - Accra. Phone: (+233) (0)302 719 783 E-Mail: gcoord@gafcscmil.edu.gh <br> NY, USA</p>
+          </div>
+          <div class="contact-details">
+            <i class="fa fa-phone"></i>
+            <p>+1-8755856858</p>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <p>Copyright 2015</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hi there</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+<style>
+    li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Other styles */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.icon {
+    /* Styles for icon */
+}
+
+.title {
+    /* Styles for title */
+}
+
+.text {
+    /* Styles for text */
+}
+
+
+
+
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        ul{
+            position: relative;
+            display: flex;
+            gap: 25px;
+        }
+        ul li{
+            position: relative;
+            list-style: none;
+            width: 120px; /* Adjusted width for larger icons */
+            height: 120px; /* Adjusted height for larger icons */
+            background: blue;
+            border-radius: 60px; /* Adjusted border-radius */
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+        }
+        ul li:hover{
+            width: 180px; /* Adjusted width on hover */
+        }
+        ul li::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 60px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        ul li:hover::before{
+            opacity: 1;
+        }
+</style>
+<li style="--color-1: #000; --color-2: #999;">
+    <div class="content">
+        <span class="icon">Icon</span>
+        <span class="title">Title</span>
+    </div>
+    <span class="text">hi there 4</span>
+</li>
