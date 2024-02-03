@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GLhlTQ8iKu1rHN/9I6U7N5sDkSxy5L7626uFiqFd/sQFAq7Yz3P0j4o8rJ+6z9e" crossorigin="anonymous">
  
     <style>
-          * {
+        * {
             padding: 0;
             font-family: sans-serif;
             margin: 0;
@@ -18,6 +18,7 @@
             background-image: url(gaf.jpg);
             background-repeat: no-repeat;
             background-size: 50% 50%; /* Adjust the values based on your preference */
+            margin-top: 120px; /* Add margin-top to prevent navbar overlapping */
         }
 
         .registration-form {
@@ -25,15 +26,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            z-index: 1; /* Ensure form appears above navbar */
+            background-color: #ffffff; /* Add a background color to the form for better visibility */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
         }
 
         .registration-form h1 {
             font-size: 30px;
             text-align: left;
             text-transform: uppercase;
-            margin-bottom: 50%;
-            margin-top: 180px;
-            
+            margin-bottom: 20px; /* Adjust spacing */
         }
 
         .registration-form p {
@@ -79,150 +83,147 @@
         #pincode {
             background-image: url("");
         }
-        <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  nav {
-    background-color: #3c2bd4;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navbar {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .navbar li {
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 30px;
-  }
-  .navbar li:last-child {
-    margin-right: 0;
-  }
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-  }
-  .navbar b{
-      margin-left: 20px;
-  }
-  
-  /* Change color of the second navbar */
-  .navbar-second {
-    background-color:white; /* Change this color as needed */
-    padding: 10px;
-    margin-left: 10px;
-  }
-  .navbar-second li {
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 25px;
-  }
-  .navbar-second li:last-child {
-    margin-right: 0;
-  }
-  .navbar-second a {
-    color: #000; /* Change this color as needed */
-    text-decoration: none;
-    font-size: 18px; /* Adjust font size as needed */
-  }
-  .my-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color:  #3c2bd4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    margin-right: 40px;
-    height: 70px;
-    border-color: #000;
-  }
-</style>
 
-       
- </style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #3c2bd4;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; /* Make navbar fixed */
+            top: 0; /* Position navbar at the top */
+            width: 100%; /* Full width */
+            z-index: 2; /* Ensure navbar appears above other content */
+        }
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-left: 30px;
+        }
+        .navbar li:last-child {
+            margin-right: 0;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .navbar b{
+            margin-left: 20px;
+        }
+
+        /* Change color of the second navbar */
+        .navbar-second {
+            background-color:white; /* Change this color as needed */
+            padding: 10px;
+            margin-left: 10px;
+        }
+        .navbar-second li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 25px;
+        }
+        .navbar-second li:last-child {
+            margin-right: 0;
+        }
+        .navbar-second a {
+            color: #000; /* Change this color as needed */
+            text-decoration: none;
+            font-size: 18px; /* Adjust font size as needed */
+        }
+        .my-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color:  #3c2bd4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 40px;
+            height: 70px;
+            border-color: #000;
+        }
+    </style>
 </head>
 
 <body>
 
-
-    <nav>
+<nav>
     <ul class="navbar">
-      <li><a href="tel:0246119272"><i class="fas fa-phone"></i> 0246119272</a></li>
-      <li><a href="mailto:applygaf2024@gmail.com"><i class="fas fa-envelope"></i> applygaf2024@gmail.com</a></li>
+        <li><a href="tel:0246119272"><i class="fas fa-phone"></i> 0246119272</a></li>
+        <li><a href="mailto:applygaf2024@gmail.com"><i class="fas fa-envelope"></i> applygaf2024@gmail.com</a></li>
     </ul>
-    
+
     <div>
-      <ul class="navbar">     
-        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-      </ul>
+        <ul class="navbar">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+        </ul>
     </div>
-  </nav>
-  
- <!-- Second Navbar -->
-   <nav class="navbar-second">
+</nav>
+
+<!-- Second Navbar -->
+<nav class="navbar-second">
     <ul class="navbar">
         <li><a href="#"><img src="gaf pic.png" alt="GAFCSC Logo" style="width: 40px;"><b>GAFCSC</b></a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="try.html">Resources</a></li>
-      <li><a href="circles.html">GAFCSC Website</a></li>
-      <li><a href="#">Contact Us</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="try.html">Resources</a></li>
+        <li><a href="circles.html">GAFCSC Website</a></li>
+        <li><a href="#">Contact Us</a></li>
     </ul>
     <a href="login.html" class="my-button">My Application</a>
+</nav>
 
-
-  </nav>
-
-
-
-    <div class="registration-form">
-        <h1>APPLICATION PORTAL</h1>
-        <form id="applicationForm">
-            <div>
+<div class="registration-form">
+    <h1>APPLICATION PORTAL</h1>
+    <form id="applicationForm">
+        <div>
             <p>Application Number:</p>
             <input type="text" name="applicationNumber" id="applicationNumber" placeholder="Username" required>
             <i class='bx bxs-user'></i>
             <p>Pincode:</p>
             <input type="password" name="pincode" id="pincode" placeholder="Pincode" required>
             <button type="button" onclick="checkApplication()">Submit</button>
-        </form>
-    </div>
-    
-    <script>
-        function checkApplication() {
-            var applicationNumber = document.getElementById("applicationNumber").value;
-            var pincode = document.getElementById("pincode").value;
-    
-            if (applicationNumber === "10881801" && pincode === "j9k92kism") {
-                alert("CLICK OKAY TO CONTINUE....");
-                // Redirect to a different page (adjust the URL as needed)
-                window.location.href = "login.html";
-            } else if (applicationNumber === "10382801" && pincode ==="Qnz78zj78cbh") {
-                alert("CLICK OKAY TO CONTINUE....");
-                // Redirect to a different page (adjust the URL as needed)
-                window.location.href = "try.html";
-            } else if (applicationNumber === "10382802" && pincode === "Q9494kisr") {
-                alert("CLICK OKAY TO CONTINUE....");
-                // Redirect to a different page (adjust the URL as needed)
-                window.location.href = "success_page.html";
-            } else {
-                alert("Invalid application number or pincode.");
-            }
+        </div>
+    </form>
+</div>
+
+<script>
+    function checkApplication() {
+        var applicationNumber = document.getElementById("applicationNumber").value;
+        var pincode = document.getElementById("pincode").value;
+
+        if (applicationNumber === "10881801" && pincode === "j9k92kism") {
+            alert("CLICK OKAY TO CONTINUE....");
+            // Redirect to a different page (adjust the URL as needed)
+            window.location.href = "login.html";
+        } else if (applicationNumber === "10382801" && pincode ==="Qnz78zj78cbh") {
+            alert("CLICK OKAY TO CONTINUE....");
+            // Redirect to a different page (adjust the URL as needed)
+            window.location.href = "try.html";
+        } else if (applicationNumber === "10382802" && pincode === "Q9494kisr") {
+            alert("CLICK OKAY TO CONTINUE....");
+            // Redirect to a different page (adjust the URL as needed)
+            window.location.href = "success_page.html";
+        } else {
+            alert("Invalid application number or pincode.");
         }
-    </script>
-    
+    }
+</script>
+
 </body>
 </html>
